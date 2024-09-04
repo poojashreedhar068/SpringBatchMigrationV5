@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: SpringBatch
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:8100/soarProject?currentSchema=public
+    username: postgres
+    password: Pooja@143
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+server:
+  port: 8081
+springdoc:
+  swagger-ui:
+    disable-swagger-default-url: true
+    path: /swaggerDoc
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
